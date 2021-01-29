@@ -1,4 +1,5 @@
 #include <iostream>
+#include "ShopKeep.h"
 
 void swap(int *x, int *y)
 {
@@ -39,6 +40,12 @@ void printArray(int arr[], int size)
 	}
 }
 
+template <typename T>
+T add(T lhs, T rhs)
+{
+	return lhs + rhs;
+}
+
 int main()
 {
 	int array[] = { 51,22,14,35,81 };
@@ -46,4 +53,6 @@ int main()
 	bubbleSort(array, numbers);
 	printArray(array, numbers);
 	return 0;
+
+	ShopKeep<int, 5> potionMan = ShopKeep<int, 5>();
 }
