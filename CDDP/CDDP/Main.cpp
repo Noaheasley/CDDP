@@ -1,4 +1,4 @@
-#include <iostream>
+#include "DynamicArray.h"
 #include "ShopKeep.h"
 
 void swap(int *x, int *y)
@@ -48,11 +48,13 @@ T add(T lhs, T rhs)
 
 int main()
 {
-	int array[] = { 51,22,14,35,81 };
-	int numbers = sizeof(array) / sizeof(array[0]);
-	bubbleSort(array, numbers);
-	printArray(array, numbers);
-	return 0;
-
-	ShopKeep<int, 5> potionMan = ShopKeep<int, 5>();
+	DynamicArray<int> test = DynamicArray<int>();
+	test.addItem(1);
+	test.addItem(4);
+	test.addItem(2);
+	test.addItem(3);
+	test.addItem(5);
+	test.sortItems();
+	test.print();
+	system("pause");
 }
